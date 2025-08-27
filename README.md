@@ -93,3 +93,27 @@ User → Server: Download model terbaik untuk inference.
 
 ### 1. Deteksi Objek Umum (COCO dataset)
 <img src="strukture.png" alt="strukture" width="500"/>
+
+### Buat File Systemd Service
+
+sudo nano /etc/systemd/system/yolo.service
+```
+[Unit]
+Description=YOLO Python Service
+After=network.target
+
+[Service]
+User=username
+WorkingDirectory=/home/username/myproject
+ExecStart=/home/username/myproject/venv/bin/python /home/username/myproject/testing_app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+### Reload & Enable Service
+
+sudo systemctl daemon-reload
+sudo systemctl enable yolo.service
+sudo systemctl start yolo.service
+
