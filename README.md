@@ -80,4 +80,16 @@ pip install opencv-python==4.8.1.78
 
 pip uninstall -y numpy
 pip install numpy==1.26.4
+```
+# Keterangan gambar strukture flow proses
+Alurnya (Step by Step)
+User → Server: Upload dataset (gambar pepaya + label).
+Server → DB: Simpan data + update dataset.yaml.
+User → Server: Download dataset terbaru (zip).
+User (local GPU): Training YOLOv8 → hasil best.pt.
+User → Server: Upload hasil training (best.pt, results.json).
+Server: Evaluasi, update leaderboard.
+User → Server: Download model terbaik untuk inference.
 
+### 1. Deteksi Objek Umum (COCO dataset)
+<img src="strukture.png" alt="strukture" width="500"/>
