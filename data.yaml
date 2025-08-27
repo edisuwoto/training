@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['pepaya']
+
+roboflow:
+  workspace: frutas2
+  project: papaya-2hie8
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/frutas2/papaya-2hie8/dataset/2
