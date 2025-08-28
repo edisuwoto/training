@@ -112,8 +112,9 @@ Restart=always
 WantedBy=multi-user.target
 ```
 ### Reload & Enable Service
-
+``
 sudo systemctl daemon-reload
 sudo systemctl enable yolo.service
 sudo systemctl start yolo.service
 
+```
